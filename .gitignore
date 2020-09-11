@@ -1,1 +1,7 @@
-/dht22
+# the binary
+dht22
+
+# bison/flex files
+config.tab.c
+config.tab.h
+lex.yy.c
