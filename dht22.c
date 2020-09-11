@@ -217,23 +217,6 @@ static void write_datapoint(const struct stream_ctx *ctx)
 	}
 }
 
-static const char *getenv_or_fail(const char *name) {
-	const char *s = getenv(name);
-	const char *err = NULL;
-
-	if (s == NULL) {
-		err = "unset";
-	} else if (*s == '\0') {
-		err = "empty";
-	}
-
-	if (err) {
-		error(EXIT_FAILURE, 0, "required env var %s is %s", name, err);
-	}
-
-	return s;
-}
-
 static void config_value_require(const char *name, int result)
 {
 	if (!result) {
