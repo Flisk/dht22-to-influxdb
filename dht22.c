@@ -190,10 +190,10 @@ static void write_datapoint(const struct stream_ctx *ctx)
 	);
 
 	if (n < 0) {
-		fprintf(stderr, "send_datapoint: snprintf returned %d\n", n);
+		fprintf(stderr, "write_datapoint: snprintf returned %d\n", n);
 		return;
 	} else if (n >= POSTFIELDS_BUF_SIZE) {
-		fprintf(stderr, "send_datapoint: request data truncated, write dropped\n");
+		fprintf(stderr, "write_datapoint: request data truncated, write dropped\n");
 		return;
 	}
 
