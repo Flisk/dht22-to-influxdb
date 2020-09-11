@@ -51,28 +51,28 @@ stream \
 
 ### `stream` options
 
-`from wiringpi <n>`
-: WiringPi GPIO pin number to poll sensor data on.<br>
+- `from wiringpi <n>`<br>
+  WiringPi GPIO pin number to poll sensor data on.<br>
   *Required: yes*
 
-`avg samples <n>`
-: How many sensor values to average into InfluxDB datapoints.<br>
+- `avg samples <n>`<br>
+  How many sensor values to average into InfluxDB datapoints.<br>
   `1` to disable averaging and write raw sensor values.<br>
   *Required: yes*
 
-`interval <n>`
-: How frequently to write datapoints to InfluxDB.<br>
+- `interval <n>`<br>
+  How frequently to write datapoints to InfluxDB.<br>
   *Unit: seconds*
   *Required: yes*
 
-`url <s>`
-: InfluxDB endpoint URL to write sensor data to.<br>
+- `url <s>`<br>
+  InfluxDB endpoint URL to write sensor data to.<br>
   *Required: yes*
 
-`username <s>` / `password <s>`
-: Login details for the InfluxDB endpoint.<br>
+- `username <s>` / `password <s>`<br>
+  Login details for the InfluxDB endpoint.<br>
   *Required: no*
 
-`measurement <s>`
-: InfluxDB measurement to write datapoints to.<br>
+- `measurement <s>`<br>
+  InfluxDB measurement to write datapoints to.<br>
   *Required: yes*
