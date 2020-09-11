@@ -250,7 +250,8 @@ static void read_config(const char *path, struct stream_ctx *ctx)
 	}
 }
 
-int main (int argc, char *argv[]) {
+int main (int argc, char *argv[])
+{
 	if (argc != 2) {
 		error(EXIT_FAILURE, 0, "usage: %s CONFIG_FILE", argv[0]);
 	}
