@@ -9,7 +9,7 @@ dht22-to-influxdb depends on the following packages:
 
 - GNU Bison *(build)*
 - flex *(build)*
-- libwiringpi *(build, runtime)*
+- libwiringPi *(build, runtime)*
 - libcurl *(build, runtime)*
 
 To build and install:
