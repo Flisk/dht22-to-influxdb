@@ -12,12 +12,16 @@ dht22-to-influxdb depends on the following packages:
 - libwiringpi *(build, runtime)*
 - libcurl *(build, runtime)*
 
-```sh
-# build and install:
+To build and install:
+
+```
 $ make
 $ sudo make DESTDIR=/usr/local install
+```
 
-# if you change your mind:
+And if you change your mind:
+
+```
 $ sudo make DESTDIR=/usr/local uninstall
 ```
 
@@ -25,7 +29,7 @@ $ sudo make DESTDIR=/usr/local uninstall
 
 Example invocation:
 
-```sh
+```
 # dht22-to-influxdb <config file>
 ```
 
