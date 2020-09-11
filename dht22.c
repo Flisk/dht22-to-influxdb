@@ -141,7 +141,7 @@ endfor:
 static int average_values(struct stream_ctx *ctx)
 {
 	if (-41.0f > ctx->temp || ctx->temp > 81.0f) {
-		/* probably a measuring error, skip this data point */
+		/* probably a measuring error, skip this datapoint */
 		fprintf(stderr, "garbage read: temp = %f\n", ctx->temp);
 		return -1;
 	}
@@ -175,7 +175,7 @@ static int average_values(struct stream_ctx *ctx)
 	return 0;
 }
 
-static void write_data_point(const struct stream_ctx *ctx)
+static void write_datapoint(const struct stream_ctx *ctx)
 {
 	time_t now = time(NULL);
 	char postfields[POSTFIELDS_BUF_SIZE] = { 0 };
@@ -190,10 +190,10 @@ static void write_data_point(const struct stream_ctx *ctx)
 	);
 
 	if (n < 0) {
-		fprintf(stderr, "send_data_point: snprintf returned %d\n", n);
+		fprintf(stderr, "send_datapoint: snprintf returned %d\n", n);
 		return;
 	} else if (n >= POSTFIELDS_BUF_SIZE) {
-		fprintf(stderr, "send_data_point: request data truncated, write dropped\n");
+		fprintf(stderr, "send_datapoint: request data truncated, write dropped\n");
 		return;
 	}
 
@@ -211,7 +211,7 @@ static void write_data_point(const struct stream_ctx *ctx)
 	if (c != CURLE_OK) {
 		fprintf(
 			stderr,
-			"curl error while writing data point: %s\n",
+			"curl error while writing datapoint: %s\n",
 			curl_easy_strerror(c)
 		);
 	}
@@ -297,7 +297,7 @@ int main (int argc, char *argv[]) {
 
 	while (1) {
 		if (poll_sensor(&ctx) == 0 && average_values(&ctx) == 0) {
-		    write_data_point(&ctx);
+		    write_datapoint(&ctx);
 
 #if DEBUG
 		    printf(
