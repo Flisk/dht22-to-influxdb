@@ -1,16 +1,15 @@
 # dht22-to-influxdb
 
-A fairly crude program for Linux that lets you read DHT22/AM2302
-sensor data (C° and rel. humidity) into InfluxDB.
+Write DHT22/AM2302 sensor data (°C and rel. humidity) to InfluxDB.
 
-## Installing
-
-dht22-to-influxdb depends on the following packages:
+## Dependencies
 
 - GNU Bison *(build)*
 - flex *(build)*
 - libwiringPi *(build, runtime)*
 - libcurl *(build, runtime)*
+
+## Installing
 
 To build and install:
 
@@ -26,8 +25,6 @@ $ sudo make DESTDIR=/usr/local uninstall
 ```
 
 ## Usage
-
-Example invocation:
 
 ```
 # dht22-to-influxdb <config file>
